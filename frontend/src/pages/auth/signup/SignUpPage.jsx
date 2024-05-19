@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 import XSvg from "../../../components/svgs/X";
@@ -47,6 +47,7 @@ const SignUpPage = () => {
 				/* Added this line below, after recording the video. I forgot to add this while recording, sorry, thx. */
 			}
 			queryClient.invalidateQueries({ queryKey: ["authUser"] });
+			Navigate('/login')
 		},
 	});
 
